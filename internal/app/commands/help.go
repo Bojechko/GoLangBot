@@ -12,7 +12,6 @@ func (c *Commander) Help(inputMessage *tgbotapi.Message) {
 			"/list - list entities \n"+
 			"/get - get element by id\n"+
 			"/edit - change element title by id\n"+
-			"/new - add new element\n"+
-			"/help - help")
+			"/new - add new element")
 	c.bot.Send(msg)
 }
