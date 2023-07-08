@@ -28,7 +28,7 @@ func (c *Commander) Edit(inputMessage *tgbotapi.Message) {
 		msg := tgbotapi.NewMessage(inputMessage.Chat.ID, fmt.Sprintf("%v", err))
 		c.bot.Send(msg)
 	} else {
-		msg := tgbotapi.NewMessage(inputMessage.Chat.ID, product.Title)
+		msg := tgbotapi.NewMessage(inputMessage.Chat.ID, fmt.Sprintf("id: %v, new title: %v", id, product.Title))
 		c.bot.Send(msg)
 	}
 }
